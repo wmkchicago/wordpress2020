@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Literata:wght@300;400;500&family=Eczar:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet"/>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -14,13 +14,14 @@
     <div class="wmk2020-burger-bar3"></div>
   </a>
   <div class="wmk2020-top-logo">
-    <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(57, 'medium')[0]; ?>"/>
+    <?php /* 57 - id kolorowego logo, 58 - id białego logo. */ ?>
+    <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
   </div>
   <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich</h1>
   <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
   <div id="close-menu"></div>
   <section id="expand-menu">
-    <nav class="wmk2020-navbar">
+    <nav class="wmk2020-navbar" id="">
       <a class="wmk2020-nav-close" href="#close-menu">
         <div class="wmk2020-nav-close-bar1"></div>
         <div class="wmk2020-nav-close-bar2"></div>
@@ -30,6 +31,8 @@
           array(
             "theme_location" => "nav-menu",
             "container" => false,
+            "link_before" => "<span class=\"wmk2020-menu-item-text\">",
+            "link_after" => "</span>",
           )
         );
       ?>

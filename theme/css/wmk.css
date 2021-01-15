@@ -26,173 +26,222 @@ li {
 }
 
 /**
- * Top bar.
+ * Header
  */
-
+ :root {
+   --logo-height: 200px;
+   --logo-vertical: 44vh;
+ }
 .wmk2020-top-header {
-  height: 100px;
+  height: 100vh;
+  width: 100vw;
   box-sizing: border-box;
   border-bottom: 1px solid #dddddd;
   background-color: #ffffff;
-  display:flex;
-  align-items: center;
+  background-image: url('../images/header-image.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
-@media (max-width: 600px) {
-  .wmk2020-top-logo {
-    display: none;
-    margin: 16px;
-  }
-  .wmk2020-top-h1 {
-    position: absolute;
-    left: 54px;
-    top: 17px;
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: .05em;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.wmk2020-top-logo {
+  position: absolute;
+  /* Intentionally use vw for height. Logo is ~ 2:1 landscape.
+   * This makes it scale down on smaller screers.
+   */
+  height: min( var(--logo-height), 40vw );
+  left: 50vw;
+  top: var(--logo-vertical);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
-@media (min-width: 601px) {
-  .wmk2020-top-logo {
-    position: relative;
-    height: 99px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .wmk2020-top-logo-img {
-    height: 100%;
-    width: auto;
-  }
-  .wmk2020-top-h1 {
-    display: none;
-  }
+.wmk2020-top-logo-img {
+  /* 120% is enough to crop the text embedded in the image,
+   * as the container is overflow: hidden. Percentage scales
+   * well with the container.
+   */
+  height: 120%;
+  width: auto;
+}
+.wmk2020-top-h1 {
+  position: absolute;
+  left: 0;
+  /* This positions the header text just below the image. */
+  top: calc( var(--logo-vertical) + ( var(--logo-height) / 2 ) );
+  width: 100%;
+  color: #fdfdfd;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.wmk2020-wide-title {
+  display: block;
 }
 .wmk2020-short-title {
   display: none;
 }
-/*
-@media (max-width: 600px) {
-  .wmk2020-wide-title {
-    display: none;
-  }
-  .wmk2020-short-title {
-    display: inline;
-  }
-}
-*/
+
 
 /**
  * Menu display.
  */
+@media (max-width: 600px) {
+  .wmk2020-nav-burger {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    background-color: #fdfdfd;
+  }
+  .wmk2020-burger-bar1, .wmk2020-burger-bar2, .wmk2020-burger-bar3 {
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
 
-.wmk2020-nav-burger {
-  margin: 0;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  cursor: pointer;
-}
-.wmk2020-burger-bar1, .wmk2020-burger-bar2, .wmk2020-burger-bar3 {
-  width: 22px;
-  height: 2px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
+  .wmk2020-nav-close {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+  }
+  .wmk2020-nav-close-bar1, .wmk2020-nav-close-bar2 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  .wmk2020-nav-close-bar1 {
+    -webkit-transform: rotate(-45deg) translate(0px, 6px) ;
+    transform: rotate(-45deg) translate(0px, 6px) ;
+  }
+  .wmk2020-nav-close-bar2 {
+    -webkit-transform: rotate(45deg) translate(0px, -6px) ;
+    transform: rotate(45deg) translate(0px, -6px) ;
+  }
 
-.wmk2020-nav-close {
-  display: inline-block;
-  cursor: pointer;
-  margin: 0;
-}
-.wmk2020-nav-close-bar1, .wmk2020-nav-close-bar2 {
-  width: 28px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
-}
-.wmk2020-nav-close-bar1 {
-  -webkit-transform: rotate(-45deg) translate(0px, 6px) ;
-  transform: rotate(-45deg) translate(0px, 6px) ;
-}
-.wmk2020-nav-close-bar2 {
-  -webkit-transform: rotate(45deg) translate(0px, -6px) ;
-  transform: rotate(45deg) translate(0px, -6px) ;
-}
+  .wmk2020-navbar {
+    overflow: hidden;
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 2;
+    left: -280px;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    line-height: 24px;
+    font-size: 1em;
+    color: #FFF3B0;
+  }
+  .wmk2020-navbar-close {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.8);
+  }
+  .wmk2020-navbar-close-text {
+    display: none;
+  }
+  .wmk2020-navbar li {
+    display: block;
+  }
+  .wmk2020-navbar a, .wmk2020-navbar a:active, .wmk2020-navbar a:visited {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 16px;
+    color: #101010;
+    height: 56px;
+  }
 
-.wmk2020-navbar {
-  overflow: hidden;
-  background-color: #f0f0f0;
-  height: 100%;
-  width: 280px;
-  position: fixed;
-  z-index: 2;
-  left: -280px;
-  top: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
-  line-height: 24px;
-  font-size: 1em;
-  color: #FFF3B0;
+  #expand-menu, #close-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #expand-menu:target .wmk2020-navbar {
+    left: 0;
+  }
+  #expand-menu:target .wmk2020-navbar {
+    left: 0;
+    transition: 0.5s;
+  }
+  #expand-menu:target li {
+    float: none;
+    width: 100%;
+  }
+  #expand-menu:target .wmk2020-navbar-close {
+    display: block;
+  }
 }
-.wmk2020-navbar-close {
-  position: fixed;
-  z-index: 1;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.8);
-}
-.wmk2020-navbar-close-text {
-  display: none;
-}
-.wmk2020-navbar li {
-  display: block;
-}
-.wmk2020-navbar a, .wmk2020-navbar a:active, .wmk2020-navbar a:visited {
-  display: block;
-  box-sizing: border-box;
-  text-decoration: none;
-  padding: 16px;
-  color: #101010;
-  height: 56px;
-}
-
-#expand-menu, #close-menu {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-#expand-menu:target .wmk2020-navbar {
-  left: 0;
-}
-#expand-menu:target .wmk2020-navbar {
-  left: 0;
-  transition: 0.5s;
-}
-#expand-menu:target li {
-  float: none;
-  width: 100%;
-}
-#expand-menu:target .wmk2020-navbar-close {
-  display: block;
+@media (min-width: 601px) {
+  :root {
+    --horizontal-menu-height: 56px;
+  }
+  #close-menu {
+    display: none;
+  }
+  .wmk2020-nav-close {
+    display: none;
+  }
+  .wmk2020-navbar-close {
+    display: none;
+  }
+  /* Use table, table-row, table-cell display in nested elements,
+   * so that menu items have the same width.
+   */
+  .wmk2020-navbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: table;
+    height: var(--horizontal-menu-height);
+  }
+  .wmk2020-navbar .menu {
+    display: table-row;
+  }
+  .wmk2020-navbar .menu-item {
+    display: table-cell;
+  }
+  .wmk2020-navbar .menu-item:first-child {
+    display: none;
+  }
+  .wmk2020-navbar .menu-item a {
+    /* To vertically align text. */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fdfdfd;
+    height: var(--horizontal-menu-height);
+    position: relative;
+  }
+  .wmk2020-menu-item-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }
 
 /**
  * Posts
  */
-
 @media (max-width: 600px) {
   .wmk2020-main {
     margin: 0 auto;
