@@ -20,11 +20,13 @@
     <div class="wmk2020-burger-bar2"></div>
     <div class="wmk2020-burger-bar3"></div>
   </a>
-  <div class="wmk2020-top-logo">
-    <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
-  </div>
-  <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich</h1>
-  <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
+  <a href="http://wmkchicago.org">
+    <div class="wmk2020-top-logo">
+      <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
+    </div>
+    <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich</h1>
+    <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
+  </a>
   <div id="close-menu"></div>
   <section id="expand-menu">
     <nav class="wmk2020-navbar" id="">
