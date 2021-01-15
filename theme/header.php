@@ -7,14 +7,20 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header class="wmk2020-top-header">
+<header class="wmk2020-top-header"
+  <?php 
+  // Override header background to posts feature image if set.
+  if (has_post_thumbnail()) {
+    echo "style=\"background-image: url(" . wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0] . ");\"";
+  }
+  ?>
+>
   <a class="wmk2020-nav-burger" href="#expand-menu">
     <div class="wmk2020-burger-bar1"></div>
     <div class="wmk2020-burger-bar2"></div>
     <div class="wmk2020-burger-bar3"></div>
   </a>
   <div class="wmk2020-top-logo">
-    <?php /* 57 - id kolorowego logo, 58 - id białego logo. */ ?>
     <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
   </div>
   <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich</h1>
