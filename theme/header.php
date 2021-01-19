@@ -5,6 +5,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&family=Literata:wght@300;400;500&family=Eczar:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet"/>
 <?php wp_head(); ?>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 </head>
 <body <?php body_class(); ?>>
 <header class="wmk2020-top-header"
