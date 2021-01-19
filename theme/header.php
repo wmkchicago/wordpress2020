@@ -34,16 +34,43 @@
         <div class="wmk2020-nav-close-bar1"></div>
         <div class="wmk2020-nav-close-bar2"></div>
       </a>
-      <?php
-        wp_nav_menu(
-          array(
-            "theme_location" => "nav-menu",
-            "container" => false,
-            "link_before" => "<span class=\"wmk2020-menu-item-text\">",
-            "link_after" => "</span>",
-          )
-        );
-      ?>
+      <ul id="menu-nav" class="menu">
+        <li class="menu-item">
+          <a href="http://wmkchicago.org/" aria-current="page">
+            <span class="wmk2020-menu-item-text">Strona główna</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#aktualnosci" aria-current="page">
+            <span class="wmk2020-menu-item-text">Aktualności</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#wydarzenia" aria-current="page">
+            <span class="wmk2020-menu-item-text">Wydarzenia</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#materialy" aria-current="page">
+            <span class="wmk2020-menu-item-text">Materiały</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#wspolnota" aria-current="page">
+            <span class="wmk2020-menu-item-text">Wspólnota</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#wesprzyj-nas" aria-current="page">
+            <span class="wmk2020-menu-item-text">Wesprzyj nas</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#kontakt" aria-current="page">
+            <span class="wmk2020-menu-item-text">Kontakt</span>
+          </a>
+        </li>
+      </ul>
     </nav>
     <a class="wmk2020-navbar-close" href="#close-menu">
       <span class="wmk2020-navbar-close-text">Close menu</span>
