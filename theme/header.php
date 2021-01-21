@@ -7,7 +7,10 @@
 <?php wp_head(); ?>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
-	var scroll = new SmoothScroll('a[href*="#"]');
+	var scroll = new SmoothScroll('a[href^="#-"]', {
+    updateURL: true,
+    emitEvents: true
+  });
 </script>
 </head>
 <body <?php body_class(); ?>>
@@ -45,32 +48,17 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="#aktualnosci" aria-current="page">
+          <a href="#-aktualnosci" aria-current="page">
             <span class="wmk2020-menu-item-text">Aktualności</span>
           </a>
         </li>
         <li class="menu-item">
-          <a href="#wydarzenia" aria-current="page">
-            <span class="wmk2020-menu-item-text">Wydarzenia</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#materialy" aria-current="page">
-            <span class="wmk2020-menu-item-text">Materiały</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#wspolnota" aria-current="page">
-            <span class="wmk2020-menu-item-text">Wspólnota</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="#wesprzyj-nas" aria-current="page">
+          <a href="#-wesprzyj-nas" aria-current="page">
             <span class="wmk2020-menu-item-text">Wesprzyj nas</span>
           </a>
         </li>
         <li class="menu-item">
-          <a href="#kontakt" aria-current="page">
+          <a href="#-kontakt" aria-current="page">
             <span class="wmk2020-menu-item-text">Kontakt</span>
           </a>
         </li>
