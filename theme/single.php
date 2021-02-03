@@ -1,5 +1,8 @@
 <?php 
 get_header();
+
+if (have_posts()) {
+    the_post();
 ?>
 <header class="wmk2020-top-header"
   <?php 
@@ -13,21 +16,23 @@ get_header();
     <div class="wmk2020-top-logo">
       <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
     </div>
-    <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich</h1>
-    <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
+    <h1 class="wmk2020-top-h1 wmk2020-wide-title"><?php the_title(); ?></h1>
+    <h1 class="wmk2020-top-h1 wmk2020-short-title"><?php the_title(); ?></h1>
   </a>
 <?php get_template_part('part', 'menu'); ?>
 </header>
 <div class="wmk2020-main" id="main-content">
 <?php
-if (have_posts()) {
-	while (have_posts()) {
-    the_post();
-    ?>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php 
+    if (has_excerpt()) {  // if has custom excerpt
+        ?>
+        <p class="wmk2020-post-exerpt">
+        <?php echo(get_the_excerpt()); ?>
+        </p>
+        <?php
+    }
+    ?><section class="wmk2020-post-content"><?php
     the_content();
-	}
+    ?></section><?php
 } else {
     esc_html_e('Jeszcze nic tu nie ma.');
 }

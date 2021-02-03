@@ -1,7 +1,5 @@
-* {
-  font-family: 'Roboto', sans;
-}
 body {
+  font-family: 'Roboto', sans;
   width: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -285,6 +283,7 @@ h2.wmk2020-aktualnosci-header {
     --margin-side: 36px;
     --margin-left: var(--margin-side);
     --margin-right: var(--margin-side);
+    --space-between: 18px;
   }
   .wmk2020-main-posts {
     display: flex;
@@ -292,7 +291,6 @@ h2.wmk2020-aktualnosci-header {
     box-sizing: border-box;
   }
   .wmk2020-main-posts li {
-    --space-between: 18px;
     --post-width: calc( ( 100vw - ( 2 * var(--margin-side) ) ) / 3 - 2 * ( var(--space-between) / 3 ) );
     width: var(--post-width);
     margin-left: var(--space-between);
@@ -410,5 +408,31 @@ h2.wmk2020-aktualnosci-header {
     color: #fefefe;
     text-align: right;
     width: 60vw;
+  }
+}
+
+.wmk2020-post-exerpt {
+  font-size: 12px;
+  color: #898989;
+  display: block;
+  text-align: right;
+  padding-top: 6px;
+}
+.wmk2020-post-content {
+  font-family: 'Eczar', serif;
+  font-weight: 400;
+  font-size: 14pt;
+  line-height: 1.4;
+}
+.wmk2020-post-content p:first-child::first-letter {
+  font-size: 5em;
+  float: left;
+  line-height: 0.65;
+  margin: 0.1em 0.05em 0 0;
+}
+@media (min-width: 601px) {
+  .wmk2020-post-content {
+    --post-aside-width: 200px;
+    padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
   }
 }
