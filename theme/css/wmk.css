@@ -208,6 +208,7 @@ li {
     width: 100%;
     display: table;
     height: var(--horizontal-menu-height);
+    font-weight: 700;
   }
   .wmk2020-navbar .menu {
     display: table-row;
@@ -411,12 +412,16 @@ h2.wmk2020-aktualnosci-header {
   }
 }
 
+.wmk2020-top-header {
+  margin-bottom: 46px;  /* compensate if post-exerpt not present. */
+}
 .wmk2020-post-exerpt {
   font-size: 12px;
   color: #898989;
   display: block;
   text-align: right;
   padding-top: 6px;
+  margin-top: -46px;
 }
 .wmk2020-post-content {
   font-family: 'Eczar', serif;
