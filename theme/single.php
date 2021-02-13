@@ -21,7 +21,7 @@ if (have_posts()) {
   </a>
 <?php get_template_part('part', 'menu'); ?>
 </header>
-<div class="wmk2020-main" id="main-content">
+<div class="wmk2020-main wmk2020-not-front-page" id="main-content">
 <?php
     if (has_excerpt()) {  // if has custom excerpt
         ?>

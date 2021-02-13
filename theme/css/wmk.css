@@ -4,17 +4,18 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: #fdfdfd;
+  color: #000000;
 }
 li > ul, li > ol {
   margin-top: 0;
 }
 a {
   text-decoration: underline;
-  color: black;
+  color: inherit;
 }
 a:hover {
   text-decoration: underline;
-  color: black;
+  color: inherit;
 }
 ol, ul {
   padding-left: 50px;
@@ -26,10 +27,10 @@ li {
 /**
  * Header
  */
- :root {
-   --logo-height: 200px;
-   --logo-vertical: 44vh;
- }
+:root {
+  --logo-height: 200px;
+  --logo-vertical: 44vh;
+}
 .wmk2020-top-header {
   height: 100vh;
   width: 100vw;
@@ -76,6 +77,51 @@ li {
 }
 .wmk2020-short-title {
   display: none;
+}
+
+/**
+ * Footer
+ */
+.wmk2020-footer {
+  display: flex;
+  align-items: stretch;
+  background: #2e2e2e;
+  color: #ededed;
+  padding-left: var(--margin-left);
+  padding-right: var(--margin-right);
+  padding-top: 72px;
+  padding-bottom: 72px;
+  margin: 0;
+  font-weight: 300;
+}
+.wmk2020-not-front-page ~ .wmk2020-footer {
+  padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
+}
+.wmk2020-footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.wmk2020-footer li:not(:first-child) {
+  padding-top: 24px;
+}
+.wmk2020-footer a {
+  text-decoration: none;
+}
+.wmk2020-footer a:hover {
+  text-decoration: underline;
+}
+.wmk2020-footer-nav {
+  width: 200px;
+  flex-grow: 1;
+}
+.wmk2020-footer-contact-info {
+  display: none;
+  width: 400px;
+  flex-grow: 2;
+  font-style: normal;
+}
+.wmk2020-not-front-page ~ .wmk2020-footer .wmk2020-footer-contact-info {
+  display: block;
 }
 
 
@@ -270,7 +316,7 @@ h2.wmk2020-aktualnosci-header {
   padding-top: 30px;
 }
 @media (max-width: 600px) {
-  .wmk2020-main {
+  :root {
     --margin-left: 54px;
     --margin-right: 22px;
   }
@@ -280,7 +326,7 @@ h2.wmk2020-aktualnosci-header {
   }
 }
 @media (min-width: 601px) {
-  .wmk2020-main {
+  :root {
     --margin-side: 36px;
     --margin-left: var(--margin-side);
     --margin-right: var(--margin-side);
@@ -436,8 +482,10 @@ h2.wmk2020-aktualnosci-header {
   margin: 0.1em 0.05em 0 0;
 }
 @media (min-width: 601px) {
-  .wmk2020-post-content {
+  :root {
     --post-aside-width: 200px;
+  }
+  .wmk2020-post-content {
     padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
   }
 }

@@ -16,7 +16,7 @@
   </a>
   <?php get_template_part('part', 'menu'); ?>
 </header>
-<div class="wmk2020-main" id="main-content">
+<div class="wmk2020-main wmk2020-front-page" id="main-content">
 <?php
 if (have_posts()) {
     the_content();
