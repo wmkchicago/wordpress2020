@@ -94,6 +94,9 @@ li {
   margin: 0;
   font-weight: 300;
 }
+.wmk2020-footer > *:not(:first-child) {
+  margin-left: var(--space-between);
+}
 .wmk2020-not-front-page ~ .wmk2020-footer {
   padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
 }
@@ -122,6 +125,14 @@ li {
 }
 .wmk2020-not-front-page ~ .wmk2020-footer .wmk2020-footer-contact-info {
   display: block;
+}
+.wmk2020-footer-logo {
+  width: 200px;
+  flex-shrink: 1;
+}
+.wmk2020-footer-logo-img {
+  max-width: 100%;
+  height: auto;
 }
 
 
