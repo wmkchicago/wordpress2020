@@ -71,12 +71,29 @@ li {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+  line-height: 2em;
+  font-size: 22pt;
+}
+@media(max-width: 600px) {
+  .wmk2020-top-h1 {
+    font-size: 4.83vw;
+  }
 }
 .wmk2020-wide-title {
   display: block;
 }
 .wmk2020-short-title {
   display: none;
+}
+.wmk2020-top-caption {
+  text-align: center;
+  width: 100%;
+  color: #fdfdfd;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0;
+  text-transform: none;
 }
 
 /**
