@@ -282,7 +282,7 @@ li {
 }
 @media (min-width: 601px) {
   :root {
-    --horizontal-menu-height: 56px;
+    --horizontal-menu-height: 72px;
   }
   #close-menu {
     display: none;
