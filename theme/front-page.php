@@ -30,12 +30,12 @@
         $postsQuery->the_post();
       ?>
       <li>
-        <div class="wmk2020-front-post-image-box">
-          <?php the_post_thumbnail('medium', ['class' => 'wmk2020-front-post-image']); ?>
-        </div>
-        <h3>
-          <a class="wmk2020-front-post-link wmk2020-front-post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h3>
+        <a class="wmk2020-front-post-link wmk2020-front-post-title" href="<?php the_permalink(); ?>">
+          <div class="wmk2020-front-post-image-box">
+            <?php the_post_thumbnail('medium', ['class' => 'wmk2020-front-post-image']); ?>
+          </div>
+          <h3><?php the_title(); ?></h3>
+        </a>
         <p class="wmk2020-front-excerpt"><?php echo get_the_excerpt(); ?></p>
       </li>
       <?php
