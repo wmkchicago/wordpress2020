@@ -42,7 +42,7 @@
       endwhile;
       ?>
     </ul>
-    <p>Wszystkie aktualności dostępne są w <a href="https://wmkchicago.org/aktualnosci/" data-type="page" data-id="7">archiwum</a>.</p>
+    <p class="wmk2020-front-posts-more">Wszystkie aktualności dostępne są w <a href="https://wmkchicago.org/aktualnosci/" data-type="page" data-id="7">archiwum</a>.</p>
   </section>
   <section class="wmk2020-front-section wmk2020-front-section-support">
     <h2 class="wmk2020-front-section-title" id="-wesprzyj-nas">Wesprzyj nas</h2>
@@ -54,7 +54,7 @@
           src="<?php echo get_template_directory_uri() . '/images/pray.png'; ?>"
           />
         <br>
-        <h3>Modlitwa</h3>
+        <h3>Pomódl się</h3>
       </li>
       <li class="wmk2020-support-item">
         <img
@@ -63,7 +63,7 @@
           src="<?php echo get_template_directory_uri() . '/images/volunteer.png'; ?>"
           />
         <br>
-        <h3>Wolontariat</h3>
+        <h3>Zostań wolontariuszem</h3>
       </li>
       <li class="wmk2020-support-item">
         <img
@@ -72,7 +72,7 @@
           src="<?php echo get_template_directory_uri() . '/images/donate.png'; ?>"
           />
         <br>
-        <h3>Dotacja</h3>
+        <h3>Złóż dotację</h3>
       </li>
     </ul>
   </section>

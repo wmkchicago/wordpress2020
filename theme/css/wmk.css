@@ -343,7 +343,6 @@ li {
 }
 .wmk2020-front-posts-list {
   position: relative;
-  margin-top: 50px;
 }
 .wmk2020-front-posts-list::before {
   content: " ";
@@ -354,6 +353,9 @@ li {
   height: 100px;
   z-index: -1;
   background: #bed297; 
+}
+.wmk2020-front-posts-more {
+  text-align: right;
 }
 .wmk2020-main-section, .wmk2020-main p {
   padding-bottom: 18px;
@@ -419,18 +421,49 @@ li {
   }
   .wmk2020-front-section-support {
     background-color: #efefef;
+    color: #efefef;
+    background-image: url(../images/support-background-large.jpg);
+    background-size: cover;
+    background-position-y: center;
   }
   .wmk2020-support-list {
     display: flex;
+    position: relative;
     list-style: none;
     padding-bottom: var(--space-between);
     padding-left: 0;
     width: 100%;
     --section-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) - ( 2 * var(--space-between) ) ) / 3 );
   }
+  .wmk2020-support-list {
+    position: relative;
+  }
+  .wmk2020-support-list::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(250, 250, 250, 0.8); 
+    backdrop-filter: blur(3px);
+  }
+  .wmk2020-support-item {
+    z-index: 2;
+    color: #020202;
+  }
+  .wmk2020-front-section-support h2 {
+    font-weight: 700;
+  }
+  .wmk2020-front-section-support h3 {
+    text-transform: lowercase;
+    font-family: 'Eczar', serif;
+  }
   .wmk2020-support-item {
     width: var(--section-width);
     text-align: center;
+    z-index: 2;
   }
   .wmk2020-support-item:not(:first-child) {
     margin-left: var(--margin-left);
