@@ -102,6 +102,20 @@ li {
   margin: 0;
   text-transform: none;
 }
+@media(min-width: 1200px) {
+  :root {
+    /* 1200px / 200px (in regular format) == 0.167. */
+    --logo-height: 16.7vw;
+  }
+  .wmk2020-top-h1 {
+    /** 22pt set above ~ 29px which is 0.02142 of 1200px. */
+    font-size: 2.412vw;
+  }
+  .wmk2020-top-caption {
+    /* 16pt set above ~ 22px which is 0.01833 of 1200px. */
+    font-size: 1.833vw;
+  }
+}
 
 /**
  * Footer
@@ -290,7 +304,7 @@ li {
     display: table;
     height: var(--horizontal-menu-height);
     font-weight: 700;
-    font-size: 20pt;
+    font-size: 16pt;
   }
   .wmk2020-navbar .menu {
     display: table-row;
@@ -317,6 +331,11 @@ li {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+}
+@media(min-width: 1200px) {
+  .wmk2020-navbar {
+    font-size: 20pt;
   }
 }
 
