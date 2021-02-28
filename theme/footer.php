@@ -5,7 +5,8 @@
   </nav>
   <address class="wmk2020-footer-contact-info">
     <p>
-      Serdecznie dziękujemy za&nbsp;zainteresowanie naszą wspólnotą. Chętnie nawiążemy kontakt lub&nbsp;odpowiemy na&nbsp;pytania jakie możecie mieć o&nbsp;naszej wspólnocie, sposobie naszej działalności, lub&nbsp;nadchodzących i&nbsp;planowanych wydarzeniach.
+      Serdecznie dziękujemy za&nbsp;zainteresowanie naszą wspólnotą.
+      Chętnie nawiążemy kontakt lub&nbsp;odpowiemy na&nbsp;pytania jakie możecie mieć o&nbsp;naszej wspólnocie, sposobie naszej działalności, lub&nbsp;nadchodzących i&nbsp;planowanych wydarzeniach.
     </p>
     <a href="mailto:kontakt@wmkchicago.org">kontakt@wmkchicago.org</a>
   </address>

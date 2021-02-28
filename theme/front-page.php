@@ -17,11 +17,69 @@
   <?php get_template_part('part', 'menu'); ?>
 </header>
 <div class="wmk2020-main wmk2020-front-page" id="main-content">
-<?php
-if (have_posts()) {
-    the_content();
-} else {
-    esc_html_e('Jeszcze nic tu nie ma.');
-}
+  <section class="wmk2020-front-section wmk2020-front-news">
+    <h2 class="wmk2020-front-section-title" id="-aktualnosci">Aktualności</h2>
+    <ul class="wmk2020-front-posts-list">
+      <?php
+      $postsQuery = new WP_Query([
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+      ]);
+      while ($postsQuery->have_posts()):
+        $postsQuery->the_post();
+      ?>
+      <li>
+        <div class="wmk2020-front-post-image-box">
+          <?php the_post_thumbnail('medium', ['class' => 'wmk2020-front-post-image']); ?>
+        </div>
+        <h3>
+          <a class="wmk2020-front-post-link wmk2020-front-post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h3>
+        <p class="wmk2020-front-excerpt"><?php echo get_the_excerpt(); ?></p>
+      </li>
+      <?php
+      endwhile;
+      ?>
+    </ul>
+    <p>Wszystkie aktualności dostępne są w <a href="https://wmkchicago.org/aktualnosci/" data-type="page" data-id="7">archiwum</a>.</p>
+  </section>
+  <section class="wmk2020-front-section wmk2020-front-section-support">
+    <h2 class="wmk2020-front-section-title" id="-wesprzyj-nas">Wesprzyj nas</h2>
+    <ul class="wmk2020-support-list">
+      <li class="wmk2020-support-item">
+        <img
+          class="wmk2020-support-item-img"
+          loading="lazy"
+          src="<?php echo get_template_directory_uri() . '/images/pray.png'; ?>"
+          />
+        <br>
+        <h3>Modlitwa</h3>
+      </li>
+      <li class="wmk2020-support-item">
+        <img
+          class="wmk2020-support-item-img"
+          loading="lazy"
+          src="<?php echo get_template_directory_uri() . '/images/volunteer.png'; ?>"
+          />
+        <br>
+        <h3>Wolontariat</h3>
+      </li>
+      <li class="wmk2020-support-item">
+        <img
+          class="wmk2020-support-item-img"
+          loading="lazy"
+          src="<?php echo get_template_directory_uri() . '/images/donate.png'; ?>"
+          />
+        <br>
+        <h3>Dotacja</h3>
+      </li>
+    </ul>
+  </section>
+  <section class="wmk2020-front-section wmk2020-front-section-contact">
+    <h2 id="-kontakt">Kontakt</h2>
+    <p>Serdecznie dziękujemy za zainteresowanie naszą wspólnotą.&nbsp; Chętnie nawiążemy kontakt lub odpowiemy na pytania jakie możecie mieć o naszej wspólnocie, sposobie naszej działalności, lub nadchodzących i planowanych wydarzeniach.</p>
+    <p>E-maile prosimy kierować na adres <a href="mailto:kontakt@wmkchicago.org">kontakt@wmkchicago.org</a>.</p>
+  </section>
+<?php get_footer();
 ?>
-<?php get_footer(); ?>

@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 body {
   font-family: 'Roboto', sans;
   width: 100%;
@@ -17,7 +20,7 @@ a:hover {
   text-decoration: underline;
   color: inherit;
 }
-ol, ul {
+p ol, p ul {
   padding-left: 50px;
 }
 li {
@@ -321,34 +324,31 @@ li {
   line-height: 22px;
 }
 .wmk2020-main h2 {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: 60px;
+  padding-bottom: 58px;
   font-family: 'Eczar', serif;
   font-size: 44px;
   line-height: 44px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 40px auto;
+  margin: 0 auto;
   width: fit-content;
 }
-/*
-.wmk2020-main h2::after {
-  content: " ";
-  display: block;
-  width: 120%;
-  border-top: 20px solid #8F9E19;
-  margin-top: -24px;
-  margin-left: -10%;
+.wmk2020-main h3 {
+  font-size: 30px;
+  line-height: 34px;
+  text-decoration: none;
+  font-weight: 400;
+  margin: 22px 0 15px 0;
 }
-*/
-.wmk2020-main-posts {
+.wmk2020-front-posts-list {
   position: relative;
   margin-top: 50px;
 }
-.wmk2020-main-posts::before {
+.wmk2020-front-posts-list::before {
   content: " ";
   position: absolute;
-  left: 20vw;
+  left: calc( 20vw - var(--margin-left) );
   top: -40px;
   width: calc( 80vw - 36px );
   height: 100px;
@@ -358,19 +358,11 @@ li {
 .wmk2020-main-section, .wmk2020-main p {
   padding-bottom: 18px;
 }
-.wmk2020-main > * {
+.wmk2020-front-section {
   padding: 0 var(--margin-right) 0 var(--margin-left);
   margin: 0;
 }
-.wmk2020-main-posts li>a {
-  display: block;
-  font-size: 30px;
-  line-height: 34px;
-  text-decoration: none;
-  font-weight: 400;
-  margin: 22px 0 15px 0;
-}
-h2.wmk2020-aktualnosci-header {
+.wmk2020-front-section-title {
   padding-top: 30px;
 }
 @media (max-width: 600px) {
@@ -378,7 +370,7 @@ h2.wmk2020-aktualnosci-header {
     --margin-left: 54px;
     --margin-right: 22px;
   }
-  .wmk2020-main-posts img {
+  .wmk2020-front-posts-list img {
     width: 100%;
     height: auto;
   }
@@ -390,54 +382,60 @@ h2.wmk2020-aktualnosci-header {
     --margin-right: var(--margin-side);
     --space-between: 18px;
   }
-  .wmk2020-main-posts {
+  .wmk2020-front-posts-list {
     display: flex;
-    width: 100vw;
+    --posts-lists-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) ) );
+    width: var(--posts-lists-width);
     box-sizing: border-box;
+    padding-left: 0;
+    list-style: none;
   }
-  .wmk2020-main-posts li {
-    --post-width: calc( ( 100vw - ( 2 * var(--margin-side) ) ) / 3 - 2 * ( var(--space-between) / 3 ) );
+  .wmk2020-front-posts-list li {
+    /* TODO: Something wrong here. Computes too widely. */
+    --post-width: calc( ( var(--posts-lists-width) - 2 * var(--space-between) ) / 3 );
     width: var(--post-width);
     margin-left: var(--space-between);
   }
-  .wmk2020-main-posts li:first-child {
+  .wmk2020-front-posts-list li:first-child {
     margin-left: 0;
   }
-  .wmk2020-main-posts .wp-block-latest-posts__featured-image {
+  .wmk2020-front-post-image-box {
     width: var(--post-width);
     height: calc( 9 * var(--post-width) / 16 );  /* 16/9 ratio */
     overflow: hidden;
   }
-  .wmk2020-main-posts img {
+  .wmk2020-front-post-image {
     width: 100%;
     height: auto;
   }
-  .wmk2020-main-posts .wp-block-latest-posts__post-excerpt {
+  .wmk2020-front-excerpt {
     padding: 0 0 19px 0;
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
   }
-  .wmk2020-support-title, .wmk2020-support {
+  .wmk2020-front-section {
+    padding-bottom: 18px;
+  }
+  .wmk2020-front-section-support {
     background-color: #efefef;
   }
-  .wmk2020-support {
+  .wmk2020-support-list {
     display: flex;
     list-style: none;
-    padding-left: var(--margin-left);
-    padding-right: var(--margin-right);
     padding-bottom: var(--space-between);
+    padding-left: 0;
     width: 100%;
     --section-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) - ( 2 * var(--space-between) ) ) / 3 );
   }
-  .wmk2020-support li {
+  .wmk2020-support-item {
     width: var(--section-width);
     text-align: center;
   }
-  .wmk2020-support li:not(:first-child) {
+  .wmk2020-support-item:not(:first-child) {
     margin-left: var(--margin-left);
   }
-  .wmk2020-support img {
+  .wmk2020-support-item-img {
     width: calc( var(--section-width) * 0.7 );
     height: calc( var(--section-width) * 0.7 );
   }
@@ -539,7 +537,7 @@ h2.wmk2020-aktualnosci-header {
   }
 }
 
-.wmk2020-top-header {
+.wmk2020-page-top-header {
   margin-bottom: 46px;  /* compensate if post-exerpt not present. */
 }
 .wmk2020-post-exerpt {

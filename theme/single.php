@@ -4,7 +4,7 @@ get_header();
 if (have_posts()) {
     the_post();
 ?>
-<header class="wmk2020-top-header"
+<header class="wmk2020-top-header wmk2020-page-top-header"
   <?php 
   // Override header background to posts feature image if set.
   if (has_post_thumbnail()) {
