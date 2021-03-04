@@ -533,6 +533,12 @@ li {
     height: calc( var(--section-width) * 0.7 );
   }
 }
+@media (max-width: 600px) {
+  .wmk2020-front-section-contact {
+    padding-left: var(--inner-margin-left);
+    padding-right: var(--inner-margin-right);
+  }
+}
 
 /**
  * Posts
