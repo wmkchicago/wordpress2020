@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="wmk2020-top-header"
+<header class="wmk2020-top-header wmk2020-front-top-header"
   <?php 
   // Override header background to posts feature image if set.
   if (has_post_thumbnail()) {
@@ -53,7 +53,6 @@
           loading="lazy"
           src="<?php echo get_template_directory_uri() . '/images/pray.png'; ?>"
           />
-        <br>
         <h3>Pomódl się</h3>
       </li>
       <li class="wmk2020-support-item">
@@ -62,7 +61,6 @@
           loading="lazy"
           src="<?php echo get_template_directory_uri() . '/images/volunteer.png'; ?>"
           />
-        <br>
         <h3>Zostań wolontariuszem</h3>
       </li>
       <li class="wmk2020-support-item">
@@ -71,7 +69,6 @@
           loading="lazy"
           src="<?php echo get_template_directory_uri() . '/images/donate.png'; ?>"
           />
-        <br>
         <h3>Złóż dotację</h3>
       </li>
     </ul>

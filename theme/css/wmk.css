@@ -356,29 +356,23 @@ li {
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 auto;
+  /* Eczar is weirdly oriented within the row.
+   * Need to adjust, so that the text apprears in the middle.
+   */
+  margin-bottom: -7px;
   width: fit-content;
 }
 .wmk2020-main h3 {
   font-size: 30px;
   line-height: 34px;
   font-weight: 400;
-  margin: 22px 0 15px 0;
 }
 .wmk2020-front-post-link h3 {
   text-decoration: none;
+  margin: 22px 0 15px 0;
 }
 .wmk2020-front-posts-list {
   position: relative;
-}
-.wmk2020-front-posts-list::before {
-  content: " ";
-  position: absolute;
-  left: calc( 20vw - var(--margin-left) );
-  top: -40px;
-  width: calc( 80vw - 36px );
-  height: 100px;
-  z-index: -1;
-  background: #bed297; 
 }
 .wmk2020-front-posts-more {
   text-align: right;
@@ -387,7 +381,8 @@ li {
   padding-bottom: 18px;
 }
 .wmk2020-front-section {
-  padding: 0 var(--margin-right) 0 var(--margin-left);
+  /* Right margin is always uniform, so universally apply on the bottom too. */
+  padding: 0 var(--margin-right) var(--margin-right) var(--margin-left);
   margin: 0;
 }
 .wmk2020-front-section-title {
@@ -442,9 +437,6 @@ li {
     font-weight: 300;
     line-height: 22px;
   }
-  .wmk2020-front-section {
-    padding-bottom: 18px;
-  }
   .wmk2020-front-section-support {
     background-color: #efefef;
     color: #efefef;
@@ -456,7 +448,6 @@ li {
     display: flex;
     position: relative;
     list-style: none;
-    padding-bottom: var(--space-between);
     padding-left: 0;
     width: 100%;
     --section-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) - ( 2 * var(--space-between) ) ) / 3 );
@@ -485,6 +476,7 @@ li {
   .wmk2020-front-section-support h3 {
     text-transform: lowercase;
     font-family: 'Eczar', serif;
+    margin: 18px 0 36px 0;
   }
   .wmk2020-support-item {
     width: var(--section-width);
@@ -597,7 +589,12 @@ li {
 }
 
 .wmk2020-page-top-header {
-  margin-bottom: 46px;  /* compensate if post-exerpt not present. */
+  /* compensate if post-exerpt not present. */
+  margin-bottom: 46px;
+}
+.wmk2020-front-top-header {
+  /* give first header a little more spece from the landing image section. */
+  margin-bottom: 36px;
 }
 .wmk2020-post-exerpt {
   font-size: 12px;
