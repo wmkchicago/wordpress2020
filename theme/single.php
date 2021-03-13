@@ -13,28 +13,33 @@ if (have_posts()) {
   ?>
 >
   <a href="http://wmkchicago.org">
-    <div class="wmk2020-top-logo">
+    <div class="wmk2020-page-logo">
       <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
     </div>
-    <h1 class="wmk2020-top-h1 wmk2020-wide-title"><?php the_title(); ?></h1>
-    <h1 class="wmk2020-top-h1 wmk2020-short-title"><?php the_title(); ?></h1>
   </a>
-<?php get_template_part('part', 'menu'); ?>
+  <h1 class="wmk2020-page-h1 wmk2020-wide-title">
+    <?php the_title(); ?>
+    <?php
+      if (has_excerpt()) {  // if has custom excerpt
+    ?>
+    <p class="wmk2020-post-exerpt">
+      <?php echo(get_the_excerpt()); ?>
+    </p>
+    <?php
+      }
+    ?>
+  </h1>
+  <h1 class="wmk2020-page-h1 wmk2020-short-title"><?php the_title(); ?></h1>
 </header>
 <div class="wmk2020-main wmk2020-not-front-page" id="main-content">
+  <section class="wmk2020-post-content">
+    <?php
+      the_content();
+    ?>
+  </section>
 <?php
-    if (has_excerpt()) {  // if has custom excerpt
-        ?>
-        <p class="wmk2020-post-exerpt">
-        <?php echo(get_the_excerpt()); ?>
-        </p>
-        <?php
-    }
-    ?><section class="wmk2020-post-content"><?php
-    the_content();
-    ?></section><?php
 } else {
-    esc_html_e('Jeszcze nic tu nie ma.');
+  esc_html_e('Jeszcze nic tu nie ma.');
 }
 get_footer();
 ?>

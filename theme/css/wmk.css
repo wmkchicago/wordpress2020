@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Roboto', sans;
   width: 100%;
@@ -636,6 +639,35 @@ li {
   }
 }
 
+
+.wmk2020-page-logo {
+  position: absolute;
+  height: 80px;
+  left: 50vw;
+  top: 20px;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+.wmk2020-page-h1 {
+  position: absolute;
+  left: var(--margin-left);
+  top: 55vh;
+  width: 100%;
+  color: #fdfdfd;
+  margin: 0;
+  text-align: left;
+  font-size: 66pt;
+  font-family: 'Eczar', serif;
+}
+.wmk2020-post-exerpt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  width: 60vw;
+  color: #efefef;
+  display: block;
+  text-align: left;
+}
 .wmk2020-page-top-header {
   /* compensate if post-exerpt not present. */
   margin-bottom: 46px;
@@ -643,14 +675,6 @@ li {
 .wmk2020-front-top-header {
   /* give first header a little more spece from the landing image section. */
   margin-bottom: 36px;
-}
-.wmk2020-post-exerpt {
-  font-size: 12px;
-  color: #898989;
-  display: block;
-  text-align: right;
-  padding-top: 6px;
-  margin-top: -46px;
 }
 .wmk2020-post-content {
   font-family: 'Eczar', serif;
@@ -679,10 +703,13 @@ li {
   line-height: 0.65;
   margin: 0.1em 0.05em 0 0;
 }
+.wmk2020-post-content p, .wmk2020-post-content li {
+  text-align: justify;
+}
 @media (min-width: 601px) {
   :root {
     --post-aside-width: 150px;
-    --post-right-extra-width: 0px;
+    --post-right-extra-width: var(--post-aside-width);
   }
   .wmk2020-post-content {
     padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
