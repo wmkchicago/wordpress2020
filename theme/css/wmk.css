@@ -343,7 +343,7 @@ li {
 /**
  * Front page
  */
-.wmk2020-main p {
+.wmk2020-main {
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -655,8 +655,23 @@ li {
 .wmk2020-post-content {
   font-family: 'Eczar', serif;
   font-weight: 400;
-  font-size: 14pt;
-  line-height: 1.4;
+  font-size: 15pt;
+  line-height: 1.6;
+}
+.wmk2020-post-content ol, .wmk2020-post-content ul {
+  margin-left: 1.5em;
+}
+.wmk2020-post-content em {
+  background-color: #efefef;
+  text-decoration: underline #cecece;
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-style: normal;
+}
+.wmk2020-post-content img {
+  width: 100%;
+  height: auto;
 }
 .wmk2020-post-content p:first-child::first-letter {
   font-size: 5em;
@@ -666,9 +681,11 @@ li {
 }
 @media (min-width: 601px) {
   :root {
-    --post-aside-width: 200px;
+    --post-aside-width: 150px;
+    --post-right-extra-width: 0px;
   }
   .wmk2020-post-content {
     padding-left: calc( var(--margin-left) + var(--space-between) + var(--post-aside-width) );
+    padding-right: calc( var(--margin-right) + var(--space-between) + var(--post-right-extra-width) );
   }
 }
