@@ -489,6 +489,12 @@ li {
     background-size: cover;
     background-position-y: center;
   }
+  .wmk2020-front-section-support-caption {
+    width: 100%;
+    text-align: center;
+    background: rgba(250, 250, 250, 0.8); 
+    backdrop-filter: blur(3px);
+  }
   .wmk2020-support-list {
     display: flex;
     position: relative;
@@ -496,9 +502,6 @@ li {
     padding-left: 0;
     width: 100%;
     --section-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) - ( 2 * var(--space-between) ) ) / 3 );
-  }
-  .wmk2020-support-list {
-    position: relative;
   }
   .wmk2020-support-list::before {
     content: " ";
