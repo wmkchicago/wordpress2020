@@ -656,17 +656,38 @@ li {
   color: #fdfdfd;
   margin: 0;
   text-align: left;
-  font-size: 66pt;
   font-family: 'Eczar', serif;
 }
-.wmk2020-post-exerpt {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16pt;
-  font-weight: 400;
-  width: 60vw;
-  color: #efefef;
-  display: block;
-  text-align: left;
+@media (max-width: 600px) {
+  .wmk2020-page-h1 {
+    left: 0;
+    text-align: center;
+    font-size: 30pt;
+  }
+  .wmk2020-post-exerpt {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    width: 60vw;
+    color: #efefef;
+    display: block;
+    text-align: left;
+  }
+}
+@media (min-width: 601px) {
+  .wmk2020-page-h1 {
+    font-size: 48pt;
+  }
+  .wmk2020-post-exerpt {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    width: 60vw;
+    color: #efefef;
+    display: block;
+    text-align: left;
+  }
 }
 .wmk2020-page-top-header {
   /* compensate if post-exerpt not present. */
@@ -705,6 +726,12 @@ li {
 }
 .wmk2020-post-content p, .wmk2020-post-content li {
   text-align: justify;
+}
+@media (max-width: 600px) {
+  .wmk2020-post-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 @media (min-width: 601px) {
   :root {
