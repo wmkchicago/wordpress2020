@@ -46,11 +46,11 @@
   </section>
   <section class="wmk2020-front-section wmk2020-front-section-support">
     <h2 class="wmk2020-front-section-title" id="-wesprzyj-nas">Wesprzyj nas</h2>
-    <p class="wmk2020-front-section-support-caption">
-      Dzięki Twojemu wsparciu możemy działać i się rozwijać.
-      Jest wiele form w które można się zaangażować.
-      WMK to nasza wspólnota, i też od Ciebie zależy jak będzie ona wyglądała w przyszłości.
-    </p>
+    <header class="wmk2020-front-section-support-caption">
+      Dzięki Twojemu wsparciu możemy działać i&nbsp;się&nbsp;rozwijać.
+      Jest wiele form w&nbsp;które można się&nbsp;zaangażować.
+      WMK to&nbsp;nasza wspólnota, i&nbsp;też od&nbsp;Ciebie zależy jak&nbsp;będzie ona wyglądała w&nbsp;przyszłości.
+    </header>
     <ul class="wmk2020-support-list">
       <li class="wmk2020-support-item">
         <img
