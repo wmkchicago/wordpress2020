@@ -658,6 +658,11 @@ li {
   text-align: left;
   font-family: 'Eczar', serif;
 }
+.wmk2020-post-exerpt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
 @media (max-width: 600px) {
   .wmk2020-page-h1 {
     left: 0;
@@ -666,11 +671,7 @@ li {
   }
   .wmk2020-post-exerpt {
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16pt;
-    font-weight: 400;
     width: 60vw;
-    color: #efefef;
     display: block;
     text-align: left;
   }
@@ -680,11 +681,7 @@ li {
     font-size: 48pt;
   }
   .wmk2020-post-exerpt {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16pt;
-    font-weight: 400;
     width: 60vw;
-    color: #efefef;
     display: block;
     text-align: left;
   }

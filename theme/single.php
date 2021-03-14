@@ -8,7 +8,7 @@ if (have_posts()) {
   <?php 
   // Override header background to posts feature image if set.
   if (has_post_thumbnail()) {
-    echo "style=\"background-image: url(" . wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0] . ");\"";
+    echo "style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(" . wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0] . ");\"";
   }
   ?>
 >
@@ -18,12 +18,12 @@ if (have_posts()) {
     </div>
   </a>
   <h1 class="wmk2020-page-h1 wmk2020-wide-title">
-    <?php the_title(); ?>
+    <span class="wmk2020-page-title-text"><?php the_title(); ?></span>
     <?php
       if (has_excerpt()) {  // if has custom excerpt
     ?>
     <p class="wmk2020-post-exerpt">
-      <?php echo(get_the_excerpt()); ?>
+      <span class="wmk2020-post-exerpt-text"><?php echo(get_the_excerpt()); ?></span>
     </p>
     <?php
       }
