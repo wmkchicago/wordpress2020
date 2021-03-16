@@ -214,6 +214,7 @@ li {
     height: 22px;
     cursor: pointer;
     background-color: #fdfdfd;
+    z-index: 1000;
   }
   .wmk2020-burger-bar1, .wmk2020-burger-bar2, .wmk2020-burger-bar3 {
     width: 22px;
@@ -290,6 +291,7 @@ li {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1001;
   }
   #expand-menu:target .wmk2020-navbar {
     left: 0;
