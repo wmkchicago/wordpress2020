@@ -499,6 +499,11 @@ li {
     margin: 0 auto;
   }
 }
+@media (max-width: 600px) {
+  .wmk2020-front-section-support-caption {
+    padding: 0 var(--inner-margin-left) 18px var(--inner-margin-right);
+  }
+}
 @media (min-width: 601px) {
   .wmk2020-front-section-support {
     background-color: #efefef;
