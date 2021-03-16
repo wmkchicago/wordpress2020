@@ -40,7 +40,8 @@ li {
  */
 :root {
   --logo-height: 200px;
-  --logo-vertical: 40vh;
+  --logo-vertical: 34vh;
+  --logo-title-distance: 8vh;
 }
 .wmk2020-top-header {
   height: 100vh;
@@ -76,7 +77,7 @@ li {
   position: absolute;
   left: 0;
   /* This positions the header text just below the image. */
-  top: calc( var(--logo-vertical) + ( var(--logo-height) / 2 ) );
+  top: calc( var(--logo-vertical) + ( var(--logo-height) / 2 ) + var(--logo-title-distance) );
   width: 100%;
   color: #fdfdfd;
   margin: 0;
