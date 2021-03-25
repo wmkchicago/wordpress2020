@@ -378,7 +378,7 @@ li {
   font-weight: 300;
   line-height: 22px;
 }
-.wmk2020-main h2 {
+.wmk2020-front-section-title {
   padding-top: 60px;
   padding-bottom: 51px;
   font-family: 'Eczar', serif;
@@ -411,9 +411,6 @@ li {
   /* Right margin is always uniform, so universally apply on the bottom too. */
   padding: 0 var(--margin-right) var(--margin-right) var(--margin-left);
   margin: 0;
-}
-.wmk2020-front-section-title {
-  padding-top: 30px;
 }
 @media (max-width: 600px) {
   :root {
@@ -580,6 +577,26 @@ li {
   .wmk2020-front-section-contact {
     padding-left: var(--inner-margin-left);
     padding-right: var(--inner-margin-right);
+  }
+}
+@media (min-width: 601px) {
+  .wmk2020-front-section-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wmk2020-front-section-title.wmk2020-contact-title {
+    width: calc( 100vw - var(--margin-left) - var(--margin-right) );
+    text-align: center;
+  }
+  .wmk2020-front-section-contact {
+    --contact-form-width: 200px;
+  }
+  .wmk2020-contact-paragraph {
+    width: calc( 100vw - var(--margin-left) - var(--margin-right) - var(--space-between) - var(--contact-form-width) );
+  }
+  .wmk2020-contact-form {
+    width: var(--contact-form-width);
   }
 }
 

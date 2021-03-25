@@ -90,9 +90,31 @@
     </ul>
   </section>
   <section class="wmk2020-front-section wmk2020-front-section-contact">
-    <h2 id="-kontakt">Kontakt</h2>
-    <p>Serdecznie dziękujemy za zainteresowanie naszą wspólnotą.&nbsp; Chętnie nawiążemy kontakt lub odpowiemy na pytania jakie możecie mieć o naszej wspólnocie, sposobie naszej działalności, lub nadchodzących i planowanych wydarzeniach.</p>
-    <p>E-maile prosimy kierować na adres <a href="mailto:kontakt@wmkchicago.org">kontakt@wmkchicago.org</a>.</p>
+    <h2 class="wmk2020-contact-title wmk2020-front-section-title" id="-kontakt">Kontakt</h2>
+    <div class="wmk2020-contact-paragraph">
+      <p>Serdecznie dziękujemy za zainteresowanie naszą wspólnotą.&nbsp; Chętnie nawiążemy kontakt lub odpowiemy na pytania jakie możecie mieć o naszej wspólnocie, sposobie naszej działalności, lub nadchodzących i planowanych wydarzeniach.</p>
+      <p>E-maile prosimy kierować na adres <a href="mailto:kontakt@wmkchicago.org">kontakt@wmkchicago.org</a>.</p>
+    </div>
+    <form class="wmk2020-contact-form">
+      <div class="wmk2020-form-field">
+        <div class="wmk2020-form-field-control">
+          <input id="contact-name" type="text" class="wmk2020-form-field-input" value="" placeholder=" " />
+          <label for="contact-name" class="wmk2020-form-field-label">Imie</label>
+          <div class="wmk2020-form-field-bar"></div>
+        </div>
+      </div>
+      <div class="wmk2020-form-field">
+        <div class="wmk2020-form-field-control">
+          <input id="contact-email" type="email" class="wmk2020-form-field-input" value="" placeholder=" " />
+          <label for="contact-email" class="wmk2020-form-field-label">E-mail</label>
+          <div class="wmk2020-form-field-bar"></div>
+        </div>
+      </div>
+      <div class="wmk2020-form-field">
+        <div class="wmk2020-form-field-control">
+          <input id="contact-email" type="submit" class="wmk2020-form-submit" value="Wyślij" placeholder="" />
+        </div>
+      </div>
+    </form>
   </section>
-<?php get_footer();
-?>
+<?php get_footer(); ?>
