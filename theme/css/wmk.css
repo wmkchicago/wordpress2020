@@ -136,6 +136,9 @@ li {
   color: #fdfdfd;
   transition: 0.3s;
 }
+.wmk2020-social-mail:hover {
+  color: #ffe082;
+}
 .wmk2020-social-yt:hover {
   color: #ff0000;
 }

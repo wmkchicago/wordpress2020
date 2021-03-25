@@ -15,6 +15,9 @@
     <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
   </a>
   <nav class="wmk2020-social-nav">
+    <a href="#-kontakt" class="wmk2020-social-button wmk2020-social-mail">
+      <i class="fas fa-envelope-square"></i>
+    </a>
     <a href="https://www.facebook.com/wmkchicago" class="wmk2020-social-button wmk2020-social-fb">
       <i class="fab fa-facebook-square"></i>
     </a>
