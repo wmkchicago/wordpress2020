@@ -98,15 +98,22 @@
     <form class="wmk2020-contact-form">
       <div class="wmk2020-form-field">
         <div class="wmk2020-form-field-control">
-          <input id="contact-name" type="text" class="wmk2020-form-field-input" value="" placeholder=" " />
+          <input id="contact-name" type="text" class="wmk2020-form-field-text wmk2020-form-field-input" value="" placeholder=" " />
           <label for="contact-name" class="wmk2020-form-field-label">Imie</label>
           <div class="wmk2020-form-field-bar"></div>
         </div>
       </div>
       <div class="wmk2020-form-field">
         <div class="wmk2020-form-field-control">
-          <input id="contact-email" type="email" class="wmk2020-form-field-input" value="" placeholder=" " />
+          <input id="contact-email" type="email" class="wmk2020-form-field-text wmk2020-form-field-input" value="" placeholder=" " />
           <label for="contact-email" class="wmk2020-form-field-label">E-mail</label>
+          <div class="wmk2020-form-field-bar"></div>
+        </div>
+      </div>
+      <div class="wmk2020-form-field">
+        <div class="wmk2020-form-field">
+          <textarea id="contact-message" class="wmk2020-form-field-text wmk2020-form-field-textarea" placeholder=" "></textarea>
+          <label for="contact-message" class="wmk2020-form-label">Treść</label>
           <div class="wmk2020-form-field-bar"></div>
         </div>
       </div>
