@@ -36,6 +36,26 @@ li {
 }
 
 /**
+ * Fonts
+ */
+.wmk2020t-header-1 {
+  font-size: 28pt;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.wmk2020t-header-2 {
+  font-size: 22pt;
+  text-transform: none;
+  font-weight: 400;
+}
+.wmk2020t-paragraph, p {
+  font-size: 12pt;
+  text-transform: none;
+  font-weight: 300;
+  line-height: 18pt;
+}
+
+/**
  * Header
  */
 :root {
@@ -374,7 +394,8 @@ li {
  * Front page
  */
 .wmk2020-main {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 300;
   line-height: 22px;
 }
@@ -440,7 +461,7 @@ li {
     --margin-side: 72px;
     --margin-left: var(--margin-side);
     --margin-right: var(--margin-side);
-    --space-between: 18px;
+    --space-between: 24px;
   }
   .wmk2020-front-posts-list {
     display: flex;
@@ -527,7 +548,6 @@ li {
     padding: 0 15vw 30px 15vw;
     line-height: 24px;
     color: #0d0d0d;
-    font-size: 18px;
     font-weight: 300;
     text-align: center;
     background: rgba(250, 250, 250, 0.8); 
@@ -581,6 +601,8 @@ li {
 }
 @media (min-width: 601px) {
   .wmk2020-front-section-contact {
+    --contact-form-width: calc( ( 100vw - var(--margin-left) - var(--margin-right) ) / 3 );
+    --contact-subheader-height: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -589,22 +611,38 @@ li {
     width: calc( 100vw - var(--margin-left) - var(--margin-right) );
     text-align: center;
   }
-  .wmk2020-front-section-contact {
-    --contact-form-width: 200px;
-  }
   .wmk2020-contact-paragraph {
+    padding-top: var(--contact-subheader-height);
     width: calc( 100vw - var(--margin-left) - var(--margin-right) - var(--space-between) - var(--contact-form-width) );
   }
   .wmk2020-contact-form {
     width: var(--contact-form-width);
   }
+  .wmk2020-contact-subheader {
+    box-sizing: border-box;
+    height: var(--contact-subheader-height);
+  }
+}
+.wmk2020-contact-paragraph-logo {
+  float: left;
+  display: block;
+  width: 30px;
+  transform: translateY(1px);
+  text-align: center;
+}
+.wmk2020-contact-paragraph-text {
+  margin-left: 40px;
+}
+.wmk2020-contact-paragraph-text::after {
+  content: " ";
+  clear: both;
 }
 
 /**
  * Contact form
  */
 .wmk2020-contact-form {
-  --form-primary-color: #b11adc;
+  --form-primary-color: #9d1409;
   --form-animation-duration: 0.4s;
 }
 .wmk2020-form-field {
@@ -625,8 +663,7 @@ li {
   width: 100%;
 }
 .wmk2020-form-field-control {
-  background: #eee;
-  border-radius: 8px 8px 0 0;
+  background: #f7f7f7;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -656,6 +693,16 @@ li {
   outline: 0;
   padding: 0 12px 10px 12px;
   width: 100%;
+}
+.wmk2020-form-submit {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: #9d1409;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+  border: none;
 }
 /* IE 10-11 */
 .wmk2020-form-field-text:-ms-input-placeholder ~ .wmk2020-form-field-label {
