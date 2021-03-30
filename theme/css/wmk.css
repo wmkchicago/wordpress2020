@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Roboto', sans;
   width: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -38,6 +37,9 @@ li {
 /**
  * Fonts
  */
+body {
+  font-family: 'Roboto', sans;
+}
 .wmk2020t-header-1 {
   font-size: 28pt;
   text-transform: uppercase;
@@ -47,6 +49,7 @@ li {
   font-size: 22pt;
   text-transform: none;
   font-weight: 400;
+  line-height: 28pt;
 }
 .wmk2020t-paragraph, p {
   font-size: 12pt;
@@ -93,7 +96,7 @@ li {
   height: 120%;
   width: auto;
 }
-.wmk2020-top-h1 {
+.wmk2020-front-title {
   position: absolute;
   left: 0;
   /* This positions the header text just below the image. */
@@ -107,17 +110,11 @@ li {
   font-size: 22pt;
 }
 @media(max-width: 600px) {
-  .wmk2020-top-h1 {
+  .wmk2020-front-title {
     font-size: 4.83vw;
   }
 }
-.wmk2020-wide-title {
-  display: block;
-}
-.wmk2020-short-title {
-  display: none;
-}
-.wmk2020-top-caption {
+.wmk2020-front-caption {
   text-align: center;
   width: 100%;
   color: #fdfdfd;
@@ -132,11 +129,11 @@ li {
     /* 1200px / 200px (in regular format) == 0.167. */
     --logo-height: 16.7vw;
   }
-  .wmk2020-top-h1 {
+  .wmk2020-front-title {
     /** 22pt set above ~ 29px which is 0.02142 of 1200px. */
     font-size: 2.412vw;
   }
-  .wmk2020-top-caption {
+  .wmk2020-front-caption {
     /* 16pt set above ~ 22px which is 0.01833 of 1200px. */
     font-size: 1.833vw;
   }
@@ -393,30 +390,13 @@ li {
 /**
  * Front page
  */
-.wmk2020-main {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 300;
-  line-height: 22px;
-}
 .wmk2020-front-section-title {
   padding-top: 60px;
   padding-bottom: 51px;
-  font-family: 'Eczar', serif;
-  font-size: 44px;
-  line-height: 44px;
-  font-weight: 400;
-  text-transform: uppercase;
   margin: 0 auto;
   width: fit-content;
 }
-.wmk2020-main h3 {
-  font-size: 30px;
-  line-height: 34px;
-  font-weight: 400;
-}
 .wmk2020-front-post-title {
-  text-decoration: none;
   margin: 22px 0 15px 0;
 }
 .wmk2020-front-posts-list {
@@ -491,9 +471,6 @@ li {
   }
   .wmk2020-front-post-excerpt {
     padding: 0 0 19px 0;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
   }
 }
 @media (max-width: 600px) {
@@ -546,9 +523,7 @@ li {
     width: 100%;
     box-sizing: border-box;
     padding: 0 15vw 30px 15vw;
-    line-height: 24px;
     color: #0d0d0d;
-    font-weight: 300;
     text-align: center;
     background: rgba(250, 250, 250, 0.8); 
     backdrop-filter: blur(3px);

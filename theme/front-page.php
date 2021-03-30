@@ -11,8 +11,7 @@
     <div class="wmk2020-top-logo">
       <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
     </div>
-    <h1 class="wmk2020-top-h1 wmk2020-wide-title">Wspólnota Małżeństw Katolickich <p class="wmk2020-top-caption">Budujemy silne małżeństwa.</p></h1>
-    <h1 class="wmk2020-top-h1 wmk2020-short-title">WMK</h1>
+    <h1 class="wmk2020-front-title">Wspólnota Małżeństw Katolickich <p class="wmk2020-front-caption">Budujemy silne małżeństwa.</p></h1>
   </a>
   <nav class="wmk2020-social-nav">
     <a href="#-kontakt" class="wmk2020-social-button wmk2020-social-mail">
@@ -57,7 +56,7 @@
   </section>
   <section class="wmk2020-front-section wmk2020-front-section-support">
     <h2 class="wmk2020-front-section-title wmk2020t-header-1" id="-wesprzyj-nas">Wesprzyj nas</h2>
-    <header class="wmk2020-front-section-support-caption wmk2020t-paragprah">
+    <header class="wmk2020-front-section-support-caption wmk2020t-paragraph">
       Dzięki Twojemu wsparciu możemy działać i&nbsp;się&nbsp;rozwijać.
       Jest wiele form w&nbsp;które można się&nbsp;zaangażować.
       WMK to&nbsp;nasza wspólnota, i&nbsp;też od&nbsp;Ciebie zależy jak&nbsp;będzie ona wyglądała w&nbsp;przyszłości.
@@ -90,7 +89,7 @@
     </ul>
   </section>
   <section class="wmk2020-front-section wmk2020-front-section-contact">
-    <h2 class="wmk2020-contact-title wmk2020-front-section-title wmk2020-header-1" id="-kontakt">Kontakt</h2>
+    <h2 class="wmk2020-contact-title wmk2020-front-section-title wmk2020t-header-1" id="-kontakt">Kontakt</h2>
     <form class="wmk2020-contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfZPfGhWlf5rvOPuZi8iVRYrOZ-QMHAYXEGxDXSgqJqT9ILtA/formResponse">
       <h3 class="wmk2020-contact-subheader wmk2020t-header-2">Napisz do nas</h3>
       <div class="wmk2020-form-field">
