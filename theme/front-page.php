@@ -13,17 +13,7 @@
     </div>
     <h1 class="wmk2020-front-title">Wspólnota Małżeństw Katolickich <p class="wmk2020-front-caption">Budujemy silne małżeństwa.</p></h1>
   </a>
-  <nav class="wmk2020-social-nav">
-    <a href="#-kontakt" class="wmk2020-social-button wmk2020-social-mail">
-      <i class="fas fa-envelope-square"></i>
-    </a>
-    <a href="https://www.facebook.com/wmkchicago" class="wmk2020-social-button wmk2020-social-fb">
-      <i class="fab fa-facebook-square"></i>
-    </a>
-    <a href="https://www.youtube.com/channel/UCh-Jyq4OHN5DoQk_cOt5fFw" class="wmk2020-social-button wmk2020-social-yt">
-      <i class="fab fa-youtube-square"></i>
-    </a>
-  </nav>
+  <?php get_template_part('part', 'social'); ?>
   <?php get_template_part('part', 'menu'); ?>
 </header>
 <div class="wmk2020-main wmk2020-front-page" id="main-content">

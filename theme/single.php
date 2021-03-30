@@ -17,19 +17,20 @@ if (have_posts()) {
       <img class="wmk2020-top-logo-img" src="<?php echo wp_get_attachment_image_src(58, 'large')[0]; ?>"/>
     </div>
   </a>
-  <h1 class="wmk2020-page-h1 wmk2020-wide-title">
-    <span class="wmk2020-page-title-text"><?php the_title(); ?></span>
+  <h1 class="wmk2020-page-h1">
+    <span class="wmk2020-page-title-text wmk2020t-header-1"><?php the_title(); ?></span>
     <?php
       if (has_excerpt()) {  // if has custom excerpt
     ?>
-    <p class="wmk2020-post-exerpt">
+    <p class="wmk2020-post-exerpt wmk2020t-paragraph">
       <span class="wmk2020-post-exerpt-text"><?php echo(get_the_excerpt()); ?></span>
     </p>
     <?php
       }
     ?>
   </h1>
-  <h1 class="wmk2020-page-h1 wmk2020-short-title"><?php the_title(); ?></h1>
+  <?php get_template_part('part', 'social'); ?>
+  <?php get_template_part('part', 'menu'); ?>
 </header>
 <div class="wmk2020-main wmk2020-not-front-page" id="main-content">
   <section class="wmk2020-post-content">
